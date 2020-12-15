@@ -765,11 +765,8 @@
     }
   }
   &__input{
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    position: absolute;
+    @extend %checkbox-hidden;
+    
    
     &:checked + .filter-color__checkbox {
     background-image: url('../images/icons/check-on.svg');
@@ -807,6 +804,129 @@
   }
   
 }
-
-
+.filter-size{
+  &__label{
+    display: block;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  &__input{
+    @extend %checkbox-hidden;
+    
+    &:checked+.filter-size__checkbox  {
+      background-image: url('../images/icons/checksize.svg');
+      border: none;
+      &+.filter-size__text{
+        color: $accent;
+      }
+    }
+  }
+  &__checkbox{
+    width: 20px;
+    height: 20px;
+    border:1px solid $default;
+    position: absolute;
+    margin-left: -35px;
+    margin-top: 3px;
+    border-radius: 50%;
+    
+  }
+}
+.filter-category{
+  &__label:not(:last-child) {
+    display: block;
+    margin-bottom: 15px;
+  }
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked+.filter-category__checkbox{
+      background-color: $accent;
+      color:#fff;
+      z-index: 99;
+    }
+  }
+  &__checkbox{
+    background-color: #f6f6f6;
+    color: $title;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px;
+  }
+}
+.filter-popular{
+  &__label{
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  &__checkbox {
+    border: 1px solid $default;
+    padding: 10px 20px;
+  }
+  &__input {
+  @extend %checkbox-hidden;
+  &:checked+.filter-popular__checkbox{
+    background-color: $accent;
+    color: #fff;
+    border-color: $accent;
+  }
+  }
+  
+}
+.shop-content{
+  width: 100%;
+  &__filter{
+    border: 1px solid  #ececec;
+    padding: 20px 25px 20px 30px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__filter-buttons{
+    display: flex;
+    align-items: center;
+  }
+  &__filter-btn{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin-left: 15px;
+    line-height: 0px;
+    cursor: pointer;
+    &.shop-content__filter-btn--active{
+      path{
+      fill: $accent;
+      }
+    }
+  }
+}
+.jq-selectbox__select{
+  margin-left: 30px;
+  height: 32px;
+  padding: 0 30px 0 0px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+ @extend %quicksand-500;
+  color: $default;
+  text-shadow: none;
+  &:hover{
+    background: transparent;
+  }
+}
+.jq-selectbox__trigger {
+  border-left: none;
+}
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  width:10px;
+  height: 5px;
+ border: none;
+  background-image: url('../images/icons/angle-down.svg');
+}
 @import 'media';
