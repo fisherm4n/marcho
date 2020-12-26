@@ -23,7 +23,7 @@ $('.button-grid').on('click', function(){
 $('.button-list').on('click', function(){
   $('.product-item').addClass('product-item--list');
 });
-$('.select-style').styler();
+$('.select-style, .product-one__item-num').styler();
   $('.filter-price__input').ionRangeSlider({
     type: "double",
     prefix:"$",
