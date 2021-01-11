@@ -53,6 +53,7 @@
     margin-top: 55px;
   }
 }
+
 .partners {
   padding-top: 75px;
 
@@ -61,5 +62,59 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .promo {
+    padding: 60px 0;
+    background-position: unset;
+
+    &__subtitle {
+      color: #fff;
+    }
+
+    &__clock {
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    &__clock-item {
+      margin: 20px 35px;
+    }
+  }
+
+  .partners {
+    padding: 60px 0;
+
+    &__list {
+      flex-wrap: wrap;
+      justify-content: center;
+      height: auto;
+    }
+
+    &__item {
+      margin: 10px 36px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .partners {
+    &__item {
+      margin: 10px 21px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .promo {
+    &__clock-item {
+      margin: 8px;
+    }
+
+    &__link {
+      margin-top: 30px;
+    }
   }
 }

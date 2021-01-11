@@ -3,7 +3,7 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
-
+@import 'media';
 
 
 // SLIDER
@@ -886,7 +886,8 @@
     @extend %roboto-700;
     color: #28384f;
     margin-bottom: 46px;
-    font-size: 48px;
+    font-size: 47px;
+    line-height: 52px;
   }
 
   &__text {
